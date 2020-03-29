@@ -16,7 +16,7 @@ function init() {
     tileLayer.addTo(mymap);
 
     // 南風運用・RWY16R(ILS/LOC)の描画（デフォルト）
-    drawIACILSRWY16R();
+    drawILSRWY16R();
 
     //マップクリック時にその地点の緯度経度をconsole出力
     mymap.on('click', function(e) {      
@@ -26,8 +26,8 @@ function init() {
 }
 
 // Instrument Approach Chart (ILS or LOC RWY16R)
-function drawIACILSRWY16R(){
-    //polyline.remove();
+function drawILSRWY16R(){
+    removePolyline();
     let waypoints = [
         [35.897472, 139.758694], //NATTY
         [35.8754, 139.7027], //RANGY
@@ -38,8 +38,32 @@ function drawIACILSRWY16R(){
     polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
 }
 
+// Instrument Approach Chart (RNAV RWY16R)
+function drawRNAVRWY16R(){
+    removePolyline();
+    let waypoints = [
+        [35.9264127, 139.7587], // NATTY
+        [35.864838, 139.676225], //RACER
+        [35.80208, 139.63208], // REMUS
+        [35.7519138, 139.6323194], // ROWAN
+        [35.70354, 139.66685], // RIPOD
+        [35.6544083, 139.7018861], // T6R73
+        [35.6038, 139.73785], // T6R74
+        [35.55834352304508 ,139.7702078865645] //16R
+    ]
+    polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
+}
+
+function removePolyline(){
+    // 初回描画時など，polylineが宣言されているが地図上に何も描画されていないときは，removeを行うとエラーになる．
+    // ここで判定を行い，描画が存在するときのみ，その描画を削除する．
+    if(polyline!=null){
+        polyline.remove();
+    }
+}
+
 function dummy(){
-    polyline.remove();
+    removePolyline();
 }
 
 
