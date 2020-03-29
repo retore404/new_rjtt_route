@@ -27,6 +27,7 @@ function init() {
 
 // Instrument Approach Chart (ILS or LOC RWY16R)
 function drawILSRWY16R(){
+    // 描画済み線を削除
     removePolyline();
     let waypoints = [
         [35.897472, 139.758694], //NATTY
@@ -40,6 +41,7 @@ function drawILSRWY16R(){
 
 // Instrument Approach Chart (RNAV RWY16R)
 function drawRNAVRWY16R(){
+    // 描画済み線を削除
     removePolyline();
     let waypoints = [
         [35.9264127, 139.7587], // NATTY
@@ -50,6 +52,20 @@ function drawRNAVRWY16R(){
         [35.6544083, 139.7018861], // T6R73
         [35.6038, 139.73785], // T6R74
         [35.55834352304508 ,139.7702078865645] //16R
+    ]
+    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
+}
+
+// Instrument Approach Chart (ILS or LOC RWY16L)
+function drawILSRWY16L(){
+    // 描画済み線を削除
+    removePolyline();
+    let waypoints = [
+        [35.821527, 139.7341], // SANDY
+        [35.821416, 139.68494], //LABAN
+        [35.82127, 139.635], // LINEN
+        [35.778472, 139.635194], // LORRY
+        [35.56569252989162, 139.78671195194357] //16L
     ]
     polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
 }
