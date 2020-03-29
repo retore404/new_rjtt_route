@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>NEW RJTT ROUTE</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="main.js"></script>
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
+
+<style>
+    body {
+        font-family:  'Yu Gothic Medium', '游ゴシック Medium', '游ゴシック体', YuGothic,  Meiryo, 'メイリオ',  'ＭＳ Ｐゴシック', sans-serif !important;
+    }
+
+    #mapid { 
+       border: solid 1px #999;
+       width:90%;
+       height:1200px;
+       max-height:80%;
+       margin: 0 auto;
+    }
+
+    .wrapper{
+        width:100%;
+        text-align:center;
+    }
+
+    table{
+        margin: 0 auto;
+    }
+
+    .copyright{
+        width:100%;
+        border-top: solid 1px #000088;
+        color: #000088;
+        font-family: "Nico Moji";
+    }
+
+    .header{
+        width:100%;
+        border-bottom: solid 1px #000088;
+        padding-bottom:0.5em;
+        margin-bottom:2em;
+        color: #000088;
+        font-family: "Nico Moji";        
+    }
+
+    h1{
+        margin-bottom:0em;
+    }
+
+    input{
+        width:100%;
+    } 
+</style>
+</head>
+
+<body onload='init();'>
+    <div class="wrapper">
+        <div class="header"><h1 id="title">NEW RJTT ROUTE</h1></div>        
+        <div id="mapid"></div>
+        <input type="radio" name="chart" onclick="drawILSRWY16R()" checked >南風運用：ILS or LOC RWY16R
+        <input type="radio" name="chart" onclick="drawRNAVRWY16R()">南風運用：RNAV RWY16R
+        <input type="radio" name="chart" onclick="drawILSRWY16L()" >南風運用：ILS or LOC RWY16L
+        <input type="radio" name="chart" onclick="drawRNAVRWY16L()" >南風運用：RNAV RWY16L
+        <input type="radio" name="chart" onclick="dummy()" >ダミー
+        <div style="margin-top:1em;">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="ロケーションスカウター" data-url="https://scouter.retore.xyz/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a href="https://twitter.com/intent/tweet?screen_name=retore&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @retore</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>  
+        </div>
+        <div class="copyright">©retore</div>
+    </div>    
+</body>
+</html>
