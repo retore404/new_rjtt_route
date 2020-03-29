@@ -70,6 +70,22 @@ function drawILSRWY16L(){
     polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
 }
 
+// Instrument Approach Chart (RNAV RWY16L)
+function drawRNAVRWY16L(){
+    // 描画済み線を削除
+    removePolyline();
+    let waypoints = [
+        [35.821527, 139.7341], // SANDY
+        [35.74836, 139.68261], // LYCEE
+        [35.6957805, 139.6941805], // LAUDA
+        [35.6494972, 139.7271361], // T6L61
+        [35.6032916, 139.75998], // T6L62
+        [35.577294, 139.7784527], // T6L63
+        [35.56569252989162, 139.78671195194357] //16L
+    ]
+    polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
+}
+
 function removePolyline(){
     // 初回描画時など，polylineが宣言されているが地図上に何も描画されていないときは，removeを行うとエラーになる．
     // ここで判定を行い，描画が存在するときのみ，その描画を削除する．
