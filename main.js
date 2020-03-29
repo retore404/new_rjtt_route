@@ -6,7 +6,7 @@ let centerpin;
 function init() {    
     // マップ表示
     mymap = L.map('mapid');
-    mymap.setView([35.6195479,139.7640561], 15);    
+    mymap.setView([35.69236889135515, 139.83192111797422], 11);    
     
     // OSMコピーライト表記
     var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png ', {
