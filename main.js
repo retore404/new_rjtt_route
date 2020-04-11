@@ -91,12 +91,12 @@ function drawILSRWY16L(){
         [35.778472, 139.635194], // LORRY
         [35.56569252989162, 139.78671195194357] //16L
     ]
-    polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
+    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
 
     // 高度のプロット
-    let marker_laban = L.marker([35.821416, 139.68494], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LABAN
+    let marker_laban = L.marker([35.821416, 139.68494], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LABAN
     markers_group.push(marker_laban);
-    let marker_limen = L.marker([35.82127, 139.635], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LINEN
+    let marker_limen = L.marker([35.82127, 139.635], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LINEN
     markers_group.push(marker_limen);
 }
 
@@ -113,16 +113,16 @@ function drawRNAVRWY16L(){
         [35.577294, 139.7784527], // T6L63
         [35.56569252989162, 139.78671195194357] //16L
     ]
-    polyline = L.polyline(waypoints, {color: 'blue'}).addTo(mymap);
+    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
 
     // 高度のプロット
-    let marker_sandy = L.marker([35.821527, 139.7341], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('1400m(4500ft)').addTo(mymap); // LABAN
+    let marker_sandy = L.marker([35.821527, 139.7341], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1400m(4500ft)').addTo(mymap); // LABAN
     markers_group.push(marker_sandy);
-    let marker_lauda = L.marker([35.6957805, 139.6941805], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('1000m(3446ft)').addTo(mymap); // LAUDA
+    let marker_lauda = L.marker([35.6957805, 139.6941805], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1000m(3446ft)').addTo(mymap); // LAUDA
     markers_group.push(marker_lauda);
-    let marker_t6l61 = L.marker([35.6494972, 139.7271361], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('700m(2271ft)').addTo(mymap); // T6L61
+    let marker_t6l61 = L.marker([35.6494972, 139.7271361], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('700m(2271ft)').addTo(mymap); // T6L61
     markers_group.push(marker_t6l61);
-    let marker_t6l62 = L.marker([35.6032916, 139.75998], {icon: L.divIcon({className: 'blue_marker'})}).bindPopup('330m(1099ft)').addTo(mymap); // T6L62
+    let marker_t6l62 = L.marker([35.6032916, 139.75998], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('330m(1099ft)').addTo(mymap); // T6L62
     markers_group.push(marker_t6l62);
 
 
