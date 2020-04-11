@@ -8,7 +8,7 @@ let markers_group = [];
 function init() {    
     // マップ表示
     mymap = L.map('mapid');
-    mymap.setView([35.69236889135515, 139.83192111797422], 11);    
+    mymap.setView([35.6896839, 139.7454333839678], 11);    
     
     // OSMコピーライト表記
     var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png ', {
