@@ -19,7 +19,7 @@ function init() {
 
     // 南風運用・RWY16R(ILS/LOC)の描画（デフォルト）
     drawILSRWY16R();
-
+    
     // 展望スポットのプロット
     L.marker([35.658587176092915, 139.7454333839678]).bindPopup('東京タワー').addTo(mymap);
     L.marker([35.7100627, 139.8100104]).bindPopup('東京スカイツリー').addTo(mymap);
