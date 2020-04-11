@@ -20,11 +20,8 @@ function init() {
     // 南風運用・RWY16R(ILS/LOC)の描画（デフォルト）
     drawILSRWY16R();
 
-    //マップクリック時にその地点の緯度経度をconsole出力
-    mymap.on('click', function(e) {      
-        let clicked_position= e.latlng;
-        console.log(clicked_position['lat'], clicked_position['lng']);      
-      });
+    
+
 }
 
 // Instrument Approach Chart (ILS or LOC RWY16R)
