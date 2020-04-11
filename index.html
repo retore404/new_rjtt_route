@@ -83,10 +83,12 @@
     <div class="wrapper">
         <div class="header"><h1 id="title">NEW RJTT ROUTE</h1></div>        
         <div id="mapid"></div>
-        <input type="radio" name="chart" onclick="drawILSRWY16R()" checked >南風運用：ILS or LOC RWY16R
-        <input type="radio" name="chart" onclick="drawRNAVRWY16R()">南風運用：RNAV RWY16R
-        <input type="radio" name="chart" onclick="drawILSRWY16L()" >南風運用：ILS or LOC RWY16L
-        <input type="radio" name="chart" onclick="drawRNAVRWY16L()" >南風運用：RNAV RWY16L
+        <form style="display:inline-flex">
+            <input type="radio" name="chart" onclick="drawILSRWY16R()" checked >ILS RWY16R
+            <input type="radio" name="chart" onclick="drawRNAVRWY16R()">RNAV RWY16R
+            <input type="radio" name="chart" onclick="drawILSRWY16L()" >ILS RWY16L
+            <input type="radio" name="chart" onclick="drawRNAVRWY16L()" >RNAV RWY16L        
+        </form>
         <div style="margin-top:1em;">
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="ロケーションスカウター" data-url="https://scouter.retore.xyz/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <a href="https://twitter.com/intent/tweet?screen_name=retore&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @retore</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
