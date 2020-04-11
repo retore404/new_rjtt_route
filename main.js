@@ -38,7 +38,7 @@ function drawILSRWY16R(){
         [35.77416,139.6161], //RUGBY
         [35.55834352304508 ,139.7702078865645] //16R
     ]
-    polyline = L.polyline(waypoints, {iconColor: 'red'}).addTo(mymap);
+    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
 
     // 高度のプロット
     let marker_rangy = L.marker([35.8754, 139.7027]).bindPopup('900m(3000ft)').addTo(mymap); // RANGY
