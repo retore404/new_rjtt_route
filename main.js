@@ -17,8 +17,9 @@ function init() {
 	  });
     tileLayer.addTo(mymap);
 
-    // 南風運用・RWY16R(ILS/LOC)の描画（デフォルト）
-    drawILSRWY16R();
+    // 飛行経路の描画
+    drawRNAVRWY16R();
+    drawRNAVRWY16L();
     
     // 展望スポットのプロット
     L.marker([35.658587176092915, 139.7454333839678]).bindPopup('東京タワー').addTo(mymap);
@@ -34,30 +35,8 @@ function init() {
     L.marker([35.63645181937626, 139.76348475617007]).bindPopup('レインボーブリッジ　歩道').addTo(mymap);
 }
 
-// Instrument Approach Chart (ILS or LOC RWY16R)
-function drawILSRWY16R(){
-    // 描画済み線を削除
-    removeObjects();
-    let waypoints = [
-        [35.897472, 139.758694], //NATTY
-        [35.8754, 139.7027], //RANGY
-        [35.84083,139.615833], //RESIN
-        [35.77416,139.6161], //RUGBY
-        [35.55834352304508 ,139.7702078865645] //16R
-    ]
-    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
-
-    // 高度のプロット
-    let marker_rangy = L.marker([35.8754, 139.7027], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('900m(3000ft)').addTo(mymap); // RANGY
-    markers_group.push(marker_rangy);
-    let marker_rugby = L.marker([35.77416,139.6161], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('900m(3000ft)').addTo(mymap); // RUGBY
-    markers_group.push(marker_rugby);
-}
-
 // Instrument Approach Chart (RNAV RWY16R)
 function drawRNAVRWY16R(){
-    // 描画済み線を削除
-    removeObjects();
     let waypoints = [
         [35.9264127, 139.7587], // NATTY
         [35.864838, 139.676225], //RACER
@@ -80,30 +59,8 @@ function drawRNAVRWY16R(){
 
 }
 
-// Instrument Approach Chart (ILS or LOC RWY16L)
-function drawILSRWY16L(){
-    // 描画済み線を削除
-    removeObjects();
-    let waypoints = [
-        [35.821527, 139.7341], // SANDY
-        [35.821416, 139.68494], //LABAN
-        [35.82127, 139.635], // LINEN
-        [35.778472, 139.635194], // LORRY
-        [35.56569252989162, 139.78671195194357] //16L
-    ]
-    polyline = L.polyline(waypoints, {color: 'red'}).addTo(mymap);
-
-    // 高度のプロット
-    let marker_laban = L.marker([35.821416, 139.68494], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LABAN
-    markers_group.push(marker_laban);
-    let marker_limen = L.marker([35.82127, 139.635], {icon: L.divIcon({className: 'red_marker'})}).bindPopup('1200m(4000ft)').addTo(mymap); // LINEN
-    markers_group.push(marker_limen);
-}
-
 // Instrument Approach Chart (RNAV RWY16L)
 function drawRNAVRWY16L(){
-    // 描画済み線を削除
-    removeObjects();
     let waypoints = [
         [35.821527, 139.7341], // SANDY
         [35.74836, 139.68261], // LYCEE
@@ -126,17 +83,4 @@ function drawRNAVRWY16L(){
     markers_group.push(marker_t6l62);
 
 
-}
-
-function removeObjects(){
-    // 初回描画時など，polylineが宣言されているが地図上に何も描画されていないときは，removeを行うとエラーになる．
-    // ここで判定を行い，描画が存在するときのみ，その描画を削除する．
-    if(polyline!=null){
-        polyline.remove();
-    }
-
-    // marker削除
-    markers_group.forEach( function(value) {
-        value.remove();
-    });
 }
