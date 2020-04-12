@@ -33,6 +33,7 @@ function init() {
     L.marker([35.62694688896252, 139.77466288282122]).bindPopup('フジテレビ 球体展望室「はちたま」<br>(123m)').addTo(mymap);
     L.marker([35.642058803268895, 139.71336892126396]).bindPopup('恵比寿ガーデンプレイス　TOP OF YEBISU<br>(167m)').addTo(mymap);
     L.marker([35.63645181937626, 139.76348475617007]).bindPopup('レインボーブリッジ(歩道)<br>(52m)').addTo(mymap);
+    L.marker([35.6587329, 139.7022202]).bindPopup('渋谷スカイ<br>(230m)').addTo(mymap);
 }
 
 // Instrument Approach Chart (RNAV RWY16R)
