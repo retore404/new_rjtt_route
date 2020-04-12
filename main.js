@@ -22,17 +22,17 @@ function init() {
     drawRNAVRWY16L();
     
     // 展望スポットのプロット
-    L.marker([35.658587176092915, 139.7454333839678]).bindPopup('東京タワー').addTo(mymap);
-    L.marker([35.7100627, 139.8100104]).bindPopup('東京スカイツリー').addTo(mymap);
-    L.marker([35.6896839, 139.6917732]).bindPopup('東京都庁').addTo(mymap);
-    L.marker([35.72943627338799, 139.71811152111064]).bindPopup('サンシャイン60展望台').addTo(mymap);
-    L.marker([35.66036646901532, 139.72910786935068]).bindPopup('六本木ヒルズ東京シティービュー').addTo(mymap);
-    L.marker([35.7079855544783, 139.75210154638836]).bindPopup('文京シビック').addTo(mymap);
-    L.marker([35.6438171, 139.6691396]).bindPopup('キャロットタワー').addTo(mymap);
-    L.marker([35.6173679, 139.7800048]).bindPopup('テレコムセンター展望室').addTo(mymap);
-    L.marker([35.62694688896252, 139.77466288282122]).bindPopup('フジテレビ 球体展望室「はちたま」').addTo(mymap);
-    L.marker([35.642058803268895, 139.71336892126396]).bindPopup('恵比寿ガーデンプレイス　TOP OF YEBISU').addTo(mymap);
-    L.marker([35.63645181937626, 139.76348475617007]).bindPopup('レインボーブリッジ　歩道').addTo(mymap);
+    L.marker([35.658587176092915, 139.7454333839678]).bindPopup('東京タワー<br>(150m)').addTo(mymap);
+    L.marker([35.7100627, 139.8100104]).bindPopup('東京スカイツリー<br>(350m/450m)').addTo(mymap);
+    L.marker([35.6896839, 139.6917732]).bindPopup('東京都庁<br>(202m)').addTo(mymap);
+    L.marker([35.72943627338799, 139.71811152111064]).bindPopup('サンシャイン60展望台<br>(251m)').addTo(mymap);
+    L.marker([35.66036646901532, 139.72910786935068]).bindPopup('六本木ヒルズ東京シティービュー<br>(250m)').addTo(mymap);
+    L.marker([35.7079855544783, 139.75210154638836]).bindPopup('文京シビック<br>(105m)').addTo(mymap);
+    L.marker([35.6438171, 139.6691396]).bindPopup('キャロットタワー<br>(124m)').addTo(mymap);
+    L.marker([35.6173679, 139.7800048]).bindPopup('テレコムセンター展望室<br>(99m)').addTo(mymap);
+    L.marker([35.62694688896252, 139.77466288282122]).bindPopup('フジテレビ 球体展望室「はちたま」<br>(123m)').addTo(mymap);
+    L.marker([35.642058803268895, 139.71336892126396]).bindPopup('恵比寿ガーデンプレイス　TOP OF YEBISU<br>(167m)').addTo(mymap);
+    L.marker([35.63645181937626, 139.76348475617007]).bindPopup('レインボーブリッジ(歩道)<br>(52m)').addTo(mymap);
 }
 
 // Instrument Approach Chart (RNAV RWY16R)
